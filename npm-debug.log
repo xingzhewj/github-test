@@ -1,0 +1,196 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink D:\Program Files\nodejs\\node.exe
+5 warn package.json work@0.0.1 No repository field.
+6 warn package.json work@0.0.1 No README data
+7 verbose readDependencies using package.json deps
+8 verbose install where, deps [ 'C:\\Users\\wangjie19\\Desktop\\工作-begin',
+8 verbose install   [ 'underscore', 'jquery' ] ]
+9 info preinstall work@0.0.1
+10 verbose readDependencies using package.json deps
+11 verbose cache add [ 'underscore@~1.2.1', null ]
+12 verbose cache add name=undefined spec="underscore@~1.2.1" args=["underscore@~1.2.1",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'underscore@~1.2.1',
+13 verbose parsed url   path: 'underscore@~1.2.1',
+13 verbose parsed url   href: 'underscore@~1.2.1' }
+14 verbose cache add [ 'jquery@>1,9.1', null ]
+15 verbose cache add name=undefined spec="jquery@>1,9.1" args=["jquery@>1,9.1",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'jquery@%3E1,9.1',
+16 verbose parsed url   path: 'jquery@%3E1,9.1',
+16 verbose parsed url   href: 'jquery@%3E1,9.1' }
+17 verbose cache add name="underscore" spec="~1.2.1" args=["underscore","~1.2.1"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '~1.2.1',
+18 verbose parsed url   path: '~1.2.1',
+18 verbose parsed url   href: '~1.2.1' }
+19 verbose addNamed [ 'underscore', '~1.2.1' ]
+20 verbose addNamed [ null, '>=1.2.1-0 <1.3.0-0' ]
+21 verbose cache add name="jquery" spec=">1,9.1" args=["jquery",">1,9.1"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '%3E1,9.1',
+22 verbose parsed url   path: '%3E1,9.1',
+22 verbose parsed url   href: '%3E1,9.1' }
+23 verbose addNamed [ 'jquery', '>1,9.1' ]
+24 verbose addNamed [ null, null ]
+25 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
+26 verbose lock underscore@~1.2.1 C:\Users\wangjie19\AppData\Roaming\npm-cache\9cd92cb1-underscore-1-2-1.lock
+27 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
+28 verbose lock jquery@>1,9.1 C:\Users\wangjie19\AppData\Roaming\npm-cache\0a5a45df-jquery-1-9-1.lock
+29 silly addNameRange { name: 'underscore',
+29 silly addNameRange   range: '>=1.2.1-0 <1.3.0-0',
+29 silly addNameRange   hasData: false }
+30 info addNameTag [ 'jquery', '>1,9.1' ]
+31 verbose request where is /underscore
+32 verbose request registry https://registry.npmjs.org/
+33 verbose request id 707bb0d2af75c3fb
+34 verbose url raw /underscore
+35 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+36 verbose url resolved https://registry.npmjs.org/underscore
+37 verbose request where is https://registry.npmjs.org/underscore
+38 info trying registry request attempt 1 at 15:22:08
+39 verbose etag "3VIG6P03O33HP7UVJ0RFVX56"
+40 http GET https://registry.npmjs.org/underscore
+41 verbose request where is /jquery
+42 verbose request registry https://registry.npmjs.org/
+43 verbose url raw /jquery
+44 verbose url resolving [ 'https://registry.npmjs.org/', './jquery' ]
+45 verbose url resolved https://registry.npmjs.org/jquery
+46 verbose request where is https://registry.npmjs.org/jquery
+47 info trying registry request attempt 1 at 15:22:08
+48 verbose etag "44PHJ1J2AOQ85ZI6OZDKY7Z9P"
+49 http GET https://registry.npmjs.org/jquery
+50 http 304 https://registry.npmjs.org/jquery
+51 silly registry.get cb [ 304,
+51 silly registry.get   { date: 'Fri, 03 Apr 2015 07:22:12 GMT',
+51 silly registry.get     server: 'Apache',
+51 silly registry.get     via: '1.1 varnish',
+51 silly registry.get     'last-modified': 'Fri, 03 Apr 2015 07:22:12 GMT',
+51 silly registry.get     'cache-control': 'max-age=60',
+51 silly registry.get     etag: '"44PHJ1J2AOQ85ZI6OZDKY7Z9P"',
+51 silly registry.get     age: '0',
+51 silly registry.get     'x-served-by': 'cache-nrt6128-NRT',
+51 silly registry.get     'x-cache': 'HIT',
+51 silly registry.get     'x-cache-hits': '1',
+51 silly registry.get     'x-timer': 'S1428045732.142667,VS0,VE411',
+51 silly registry.get     vary: 'Accept',
+51 silly registry.get     'content-length': '0',
+51 silly registry.get     'keep-alive': 'timeout=10, max=50',
+51 silly registry.get     connection: 'Keep-Alive' } ]
+52 verbose etag https://registry.npmjs.org/jquery from cache
+53 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
+54 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
+55 http 304 https://registry.npmjs.org/underscore
+56 silly registry.get cb [ 304,
+56 silly registry.get   { date: 'Fri, 03 Apr 2015 07:22:20 GMT',
+56 silly registry.get     server: 'Apache',
+56 silly registry.get     via: '1.1 varnish',
+56 silly registry.get     'last-modified': 'Fri, 03 Apr 2015 07:22:20 GMT',
+56 silly registry.get     'cache-control': 'max-age=60',
+56 silly registry.get     etag: '"3VIG6P03O33HP7UVJ0RFVX56"',
+56 silly registry.get     age: '2',
+56 silly registry.get     'x-served-by': 'cache-nrt6135-NRT',
+56 silly registry.get     'x-cache': 'HIT',
+56 silly registry.get     'x-cache-hits': '1',
+56 silly registry.get     'x-timer': 'S1428045740.911845,VS0,VE1',
+56 silly registry.get     vary: 'Accept',
+56 silly registry.get     'content-length': '0',
+56 silly registry.get     'keep-alive': 'timeout=10, max=50',
+56 silly registry.get     connection: 'Keep-Alive' } ]
+57 verbose etag https://registry.npmjs.org/underscore from cache
+58 silly addNameRange number 2 { name: 'underscore',
+58 silly addNameRange   range: '>=1.2.1-0 <1.3.0-0',
+58 silly addNameRange   hasData: true }
+59 silly addNameRange versions [ 'underscore',
+59 silly addNameRange   [ '1.0.3',
+59 silly addNameRange     '1.0.4',
+59 silly addNameRange     '1.1.0',
+59 silly addNameRange     '1.1.1',
+59 silly addNameRange     '1.1.2',
+59 silly addNameRange     '1.1.3',
+59 silly addNameRange     '1.1.4',
+59 silly addNameRange     '1.1.5',
+59 silly addNameRange     '1.1.6',
+59 silly addNameRange     '1.1.7',
+59 silly addNameRange     '1.2.0',
+59 silly addNameRange     '1.2.1',
+59 silly addNameRange     '1.2.2',
+59 silly addNameRange     '1.2.3',
+59 silly addNameRange     '1.2.4',
+59 silly addNameRange     '1.3.0',
+59 silly addNameRange     '1.3.1',
+59 silly addNameRange     '1.3.2',
+59 silly addNameRange     '1.3.3',
+59 silly addNameRange     '1.4.0',
+59 silly addNameRange     '1.4.1',
+59 silly addNameRange     '1.4.2',
+59 silly addNameRange     '1.4.3',
+59 silly addNameRange     '1.4.4',
+59 silly addNameRange     '1.5.0',
+59 silly addNameRange     '1.5.1',
+59 silly addNameRange     '1.5.2',
+59 silly addNameRange     '1.6.0',
+59 silly addNameRange     '1.7.0',
+59 silly addNameRange     '1.8.0',
+59 silly addNameRange     '1.8.1',
+59 silly addNameRange     '1.8.2',
+59 silly addNameRange     '1.8.3' ] ]
+60 verbose addNamed [ 'underscore', '1.2.4' ]
+61 verbose addNamed [ '1.2.4', '1.2.4' ]
+62 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+63 verbose lock underscore@1.2.4 C:\Users\wangjie19\AppData\Roaming\npm-cache\0405c947-underscore-1-2-4.lock
+64 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+65 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+66 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
+67 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
+68 error notarget No compatible version found: jquery@'>1,9.1'
+68 error notarget Valid install targets:
+68 error notarget ["1.5.1","1.6.2","1.6.3","1.7.2","1.7.3","1.8.2","1.8.3","2.1.0-beta2","2.1.0-beta3","1.11.0-beta3","1.11.0-rc1","2.1.0-rc1","1.11.0","2.1.0","2.1.1-beta1","1.11.1-beta1","2.1.1-rc1","1.11.1-rc1","2.1.1-rc2","1.11.1-rc2","2.1.1","1.11.1","1.9.1","2.1.2","1.11.2","2.1.3"]
+68 error notarget
+68 error notarget This is most likely not a problem with npm itself.
+68 error notarget In most cases you or one of your dependencies are requesting
+68 error notarget a package version that doesn't exist.
+69 error System Windows_NT 6.1.7601
+70 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+71 error cwd C:\Users\wangjie19\Desktop\工作-begin
+72 error node -v v0.10.32
+73 error npm -v 1.4.28
+74 error code ETARGET
+75 verbose exit [ 1, true ]
