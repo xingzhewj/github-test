@@ -1,0 +1,4 @@
+#! /usr/bin/env node
+
+var cli = require( '../src/main' );
+cli.initProject( process.argv );

@@ -1,196 +1,95 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install' ]
+1 verbose cli   'publish' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 verbose node symlink D:\Program Files\nodejs\\node.exe
-5 warn package.json work@0.0.1 No repository field.
-6 warn package.json work@0.0.1 No README data
-7 verbose readDependencies using package.json deps
-8 verbose install where, deps [ 'C:\\Users\\wangjie19\\Desktop\\工作-begin',
-8 verbose install   [ 'underscore', 'jquery' ] ]
-9 info preinstall work@0.0.1
-10 verbose readDependencies using package.json deps
-11 verbose cache add [ 'underscore@~1.2.1', null ]
-12 verbose cache add name=undefined spec="underscore@~1.2.1" args=["underscore@~1.2.1",null]
-13 verbose parsed url { protocol: null,
-13 verbose parsed url   slashes: null,
-13 verbose parsed url   auth: null,
-13 verbose parsed url   host: null,
-13 verbose parsed url   port: null,
-13 verbose parsed url   hostname: null,
-13 verbose parsed url   hash: null,
-13 verbose parsed url   search: null,
-13 verbose parsed url   query: null,
-13 verbose parsed url   pathname: 'underscore@~1.2.1',
-13 verbose parsed url   path: 'underscore@~1.2.1',
-13 verbose parsed url   href: 'underscore@~1.2.1' }
-14 verbose cache add [ 'jquery@>1,9.1', null ]
-15 verbose cache add name=undefined spec="jquery@>1,9.1" args=["jquery@>1,9.1",null]
-16 verbose parsed url { protocol: null,
-16 verbose parsed url   slashes: null,
-16 verbose parsed url   auth: null,
-16 verbose parsed url   host: null,
-16 verbose parsed url   port: null,
-16 verbose parsed url   hostname: null,
-16 verbose parsed url   hash: null,
-16 verbose parsed url   search: null,
-16 verbose parsed url   query: null,
-16 verbose parsed url   pathname: 'jquery@%3E1,9.1',
-16 verbose parsed url   path: 'jquery@%3E1,9.1',
-16 verbose parsed url   href: 'jquery@%3E1,9.1' }
-17 verbose cache add name="underscore" spec="~1.2.1" args=["underscore","~1.2.1"]
-18 verbose parsed url { protocol: null,
-18 verbose parsed url   slashes: null,
-18 verbose parsed url   auth: null,
-18 verbose parsed url   host: null,
-18 verbose parsed url   port: null,
-18 verbose parsed url   hostname: null,
-18 verbose parsed url   hash: null,
-18 verbose parsed url   search: null,
-18 verbose parsed url   query: null,
-18 verbose parsed url   pathname: '~1.2.1',
-18 verbose parsed url   path: '~1.2.1',
-18 verbose parsed url   href: '~1.2.1' }
-19 verbose addNamed [ 'underscore', '~1.2.1' ]
-20 verbose addNamed [ null, '>=1.2.1-0 <1.3.0-0' ]
-21 verbose cache add name="jquery" spec=">1,9.1" args=["jquery",">1,9.1"]
-22 verbose parsed url { protocol: null,
-22 verbose parsed url   slashes: null,
-22 verbose parsed url   auth: null,
-22 verbose parsed url   host: null,
-22 verbose parsed url   port: null,
-22 verbose parsed url   hostname: null,
-22 verbose parsed url   hash: null,
-22 verbose parsed url   search: null,
-22 verbose parsed url   query: null,
-22 verbose parsed url   pathname: '%3E1,9.1',
-22 verbose parsed url   path: '%3E1,9.1',
-22 verbose parsed url   href: '%3E1,9.1' }
-23 verbose addNamed [ 'jquery', '>1,9.1' ]
-24 verbose addNamed [ null, null ]
-25 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
-26 verbose lock underscore@~1.2.1 C:\Users\wangjie19\AppData\Roaming\npm-cache\9cd92cb1-underscore-1-2-1.lock
-27 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
-28 verbose lock jquery@>1,9.1 C:\Users\wangjie19\AppData\Roaming\npm-cache\0a5a45df-jquery-1-9-1.lock
-29 silly addNameRange { name: 'underscore',
-29 silly addNameRange   range: '>=1.2.1-0 <1.3.0-0',
-29 silly addNameRange   hasData: false }
-30 info addNameTag [ 'jquery', '>1,9.1' ]
-31 verbose request where is /underscore
-32 verbose request registry https://registry.npmjs.org/
-33 verbose request id 707bb0d2af75c3fb
-34 verbose url raw /underscore
-35 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
-36 verbose url resolved https://registry.npmjs.org/underscore
-37 verbose request where is https://registry.npmjs.org/underscore
-38 info trying registry request attempt 1 at 15:22:08
-39 verbose etag "3VIG6P03O33HP7UVJ0RFVX56"
-40 http GET https://registry.npmjs.org/underscore
-41 verbose request where is /jquery
-42 verbose request registry https://registry.npmjs.org/
-43 verbose url raw /jquery
-44 verbose url resolving [ 'https://registry.npmjs.org/', './jquery' ]
-45 verbose url resolved https://registry.npmjs.org/jquery
-46 verbose request where is https://registry.npmjs.org/jquery
-47 info trying registry request attempt 1 at 15:22:08
-48 verbose etag "44PHJ1J2AOQ85ZI6OZDKY7Z9P"
-49 http GET https://registry.npmjs.org/jquery
-50 http 304 https://registry.npmjs.org/jquery
-51 silly registry.get cb [ 304,
-51 silly registry.get   { date: 'Fri, 03 Apr 2015 07:22:12 GMT',
-51 silly registry.get     server: 'Apache',
-51 silly registry.get     via: '1.1 varnish',
-51 silly registry.get     'last-modified': 'Fri, 03 Apr 2015 07:22:12 GMT',
-51 silly registry.get     'cache-control': 'max-age=60',
-51 silly registry.get     etag: '"44PHJ1J2AOQ85ZI6OZDKY7Z9P"',
-51 silly registry.get     age: '0',
-51 silly registry.get     'x-served-by': 'cache-nrt6128-NRT',
-51 silly registry.get     'x-cache': 'HIT',
-51 silly registry.get     'x-cache-hits': '1',
-51 silly registry.get     'x-timer': 'S1428045732.142667,VS0,VE411',
-51 silly registry.get     vary: 'Accept',
-51 silly registry.get     'content-length': '0',
-51 silly registry.get     'keep-alive': 'timeout=10, max=50',
-51 silly registry.get     connection: 'Keep-Alive' } ]
-52 verbose etag https://registry.npmjs.org/jquery from cache
-53 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
-54 silly lockFile 0a5a45df-jquery-1-9-1 jquery@>1,9.1
-55 http 304 https://registry.npmjs.org/underscore
-56 silly registry.get cb [ 304,
-56 silly registry.get   { date: 'Fri, 03 Apr 2015 07:22:20 GMT',
-56 silly registry.get     server: 'Apache',
-56 silly registry.get     via: '1.1 varnish',
-56 silly registry.get     'last-modified': 'Fri, 03 Apr 2015 07:22:20 GMT',
-56 silly registry.get     'cache-control': 'max-age=60',
-56 silly registry.get     etag: '"3VIG6P03O33HP7UVJ0RFVX56"',
-56 silly registry.get     age: '2',
-56 silly registry.get     'x-served-by': 'cache-nrt6135-NRT',
-56 silly registry.get     'x-cache': 'HIT',
-56 silly registry.get     'x-cache-hits': '1',
-56 silly registry.get     'x-timer': 'S1428045740.911845,VS0,VE1',
-56 silly registry.get     vary: 'Accept',
-56 silly registry.get     'content-length': '0',
-56 silly registry.get     'keep-alive': 'timeout=10, max=50',
-56 silly registry.get     connection: 'Keep-Alive' } ]
-57 verbose etag https://registry.npmjs.org/underscore from cache
-58 silly addNameRange number 2 { name: 'underscore',
-58 silly addNameRange   range: '>=1.2.1-0 <1.3.0-0',
-58 silly addNameRange   hasData: true }
-59 silly addNameRange versions [ 'underscore',
-59 silly addNameRange   [ '1.0.3',
-59 silly addNameRange     '1.0.4',
-59 silly addNameRange     '1.1.0',
-59 silly addNameRange     '1.1.1',
-59 silly addNameRange     '1.1.2',
-59 silly addNameRange     '1.1.3',
-59 silly addNameRange     '1.1.4',
-59 silly addNameRange     '1.1.5',
-59 silly addNameRange     '1.1.6',
-59 silly addNameRange     '1.1.7',
-59 silly addNameRange     '1.2.0',
-59 silly addNameRange     '1.2.1',
-59 silly addNameRange     '1.2.2',
-59 silly addNameRange     '1.2.3',
-59 silly addNameRange     '1.2.4',
-59 silly addNameRange     '1.3.0',
-59 silly addNameRange     '1.3.1',
-59 silly addNameRange     '1.3.2',
-59 silly addNameRange     '1.3.3',
-59 silly addNameRange     '1.4.0',
-59 silly addNameRange     '1.4.1',
-59 silly addNameRange     '1.4.2',
-59 silly addNameRange     '1.4.3',
-59 silly addNameRange     '1.4.4',
-59 silly addNameRange     '1.5.0',
-59 silly addNameRange     '1.5.1',
-59 silly addNameRange     '1.5.2',
-59 silly addNameRange     '1.6.0',
-59 silly addNameRange     '1.7.0',
-59 silly addNameRange     '1.8.0',
-59 silly addNameRange     '1.8.1',
-59 silly addNameRange     '1.8.2',
-59 silly addNameRange     '1.8.3' ] ]
-60 verbose addNamed [ 'underscore', '1.2.4' ]
-61 verbose addNamed [ '1.2.4', '1.2.4' ]
-62 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
-63 verbose lock underscore@1.2.4 C:\Users\wangjie19\AppData\Roaming\npm-cache\0405c947-underscore-1-2-4.lock
-64 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
-65 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
-66 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
-67 silly lockFile 9cd92cb1-underscore-1-2-1 underscore@~1.2.1
-68 error notarget No compatible version found: jquery@'>1,9.1'
-68 error notarget Valid install targets:
-68 error notarget ["1.5.1","1.6.2","1.6.3","1.7.2","1.7.3","1.8.2","1.8.3","2.1.0-beta2","2.1.0-beta3","1.11.0-beta3","1.11.0-rc1","2.1.0-rc1","1.11.0","2.1.0","2.1.1-beta1","1.11.1-beta1","2.1.1-rc1","1.11.1-rc1","2.1.1-rc2","1.11.1-rc2","2.1.1","1.11.1","1.9.1","2.1.2","1.11.2","2.1.3"]
-68 error notarget
-68 error notarget This is most likely not a problem with npm itself.
-68 error notarget In most cases you or one of your dependencies are requesting
-68 error notarget a package version that doesn't exist.
-69 error System Windows_NT 6.1.7601
-70 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-71 error cwd C:\Users\wangjie19\Desktop\工作-begin
-72 error node -v v0.10.32
-73 error npm -v 1.4.28
-74 error code ETARGET
-75 verbose exit [ 1, true ]
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\wangjie19\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\wangjie19\\AppData\\Roaming\\npm-cache\\work-xingzhe\\0.0.1\\package.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
+13 verbose folder .
+14 info prepublish work-xingzhe@0.0.1
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. C:\Users\wangjie19\AppData\Roaming\npm-cache\1f1177db-tar.lock
+17 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
+18 verbose lock tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz C:\Users\wangjie19\AppData\Roaming\npm-cache\f9666a84-e-work-xingzhe-0-0-1-package-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
+22 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
+23 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
+24 verbose lock C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package C:\Users\wangjie19\AppData\Roaming\npm-cache\20c6cae9-cache-work-xingzhe-0-0-1-package.lock
+25 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
+26 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
+27 silly lockFile 3a52ce78- .
+28 silly lockFile 3a52ce78- .
+29 silly publish { name: 'work-xingzhe',
+29 silly publish   version: '0.0.1',
+29 silly publish   description: 'myself work description',
+29 silly publish   dependencies: { underscore: '~1.2.1', jquery: '>1.9.1', express: '*' },
+29 silly publish   main: 'app.js',
+29 silly publish   devDependencies: {},
+29 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+29 silly publish   keywords: [ 'fuck' ],
+29 silly publish   author: { name: 'xingzhe' },
+29 silly publish   license: 'ISC',
+29 silly publish   repository: { type: 'git', url: 'git@github.com:xingzhewj/github-test.git' },
+29 silly publish   bugs: { url: 'https://github.com/xingzhewj/github-test/issues' },
+29 silly publish   homepage: 'https://github.com/xingzhewj/github-test',
+29 silly publish   readme: 'ERROR: No README data found!',
+29 silly publish   gitHead: '496d68b22b2571bd623ab0f38c679accd77bcbd3',
+29 silly publish   _id: 'work-xingzhe@0.0.1',
+29 silly publish   _shasum: '1fd75385131cf58482830f284dc02825503d7ad6',
+29 silly publish   _from: '.' }
+30 verbose request where is /work-xingzhe
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 03f740b9172dc782
+33 verbose url raw /work-xingzhe
+34 verbose url resolving [ 'https://registry.npmjs.org/', './work-xingzhe' ]
+35 verbose url resolved https://registry.npmjs.org/work-xingzhe
+36 verbose request where is https://registry.npmjs.org/work-xingzhe
+37 info trying registry request attempt 1 at 17:38:37
+38 http PUT https://registry.npmjs.org/work-xingzhe
+39 http 409 https://registry.npmjs.org/work-xingzhe
+40 verbose request where is /work-xingzhe?write=true
+41 verbose request registry https://registry.npmjs.org/
+42 verbose url raw /work-xingzhe?write=true
+43 verbose url resolving [ 'https://registry.npmjs.org/', './work-xingzhe?write=true' ]
+44 verbose url resolved https://registry.npmjs.org/work-xingzhe?write=true
+45 verbose request where is https://registry.npmjs.org/work-xingzhe?write=true
+46 info trying registry request attempt 1 at 17:38:40
+47 http GET https://registry.npmjs.org/work-xingzhe?write=true
+48 http 200 https://registry.npmjs.org/work-xingzhe?write=true
+49 error publish fail Cannot publish over existing version.
+49 error publish fail Update the 'version' field in package.json and try again.
+49 error publish fail
+49 error publish fail If the previous version was published in error, see:
+49 error publish fail     npm help unpublish
+49 error publish fail
+49 error publish fail To automatically increment version numbers, see:
+49 error publish fail     npm help version
+50 error System Windows_NT 6.1.7601
+51 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+52 error cwd C:\Users\wangjie19\Desktop\work-begin\github-test
+53 error node -v v0.10.32
+54 error npm -v 1.4.28
+55 error code EPUBLISHCONFLICT
+56 verbose exit [ 1, true ]

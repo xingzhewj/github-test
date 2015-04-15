@@ -1,6 +1,6 @@
 {
   "name": "work-xingzhe",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "myself work description",
   "dependencies": {
     "underscore": "~1.2.1",
@@ -19,10 +19,13 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:xingzhewj/node-test.git"
+    "url": "git@github.com:xingzhewj/github-test.git"
+  },
+  "bin": {
+    "work-xingzhe": "./cli/embed"
   },
   "bugs": {
-    "url": "https://github.com/xingzhewj/node-test/issues"
+    "url": "https://github.com/xingzhewj/github-test/issues"
   },
-  "homepage": "https://github.com/xingzhewj/node-test"
+  "homepage": "https://github.com/xingzhewj/github-test"
 }
