@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>嵌入API</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/demo.css">
+    <script src="./data.js"></script>
+</head>
+<body>
+    <div class="embed-header">
+        <div class="embed-logo">
+            <img class="embed-logo-icon" src="./css/img/embed.png" alt="嵌入" title="嵌入">
+            <span class="embed-logo-title">嵌入API</span>
+        </div>
+        <div class="embed-search">
+            <input type="text" id="search_val" value="" placeholder="xxoo">
+            <input type="button" id="search_btn" name="" value="查询">
+        </div>
+    </div>
+    <div class="embed-contain">
+        <div class="embed-body-list">
+            <ul id="items">
+                <li>
+                    <a class="level-title" href="" title="">ajax</a>
+                    <ul class="item-list">
+                        <li data-item="jsonp">ajax.jsonp</li>
+                        <li data-item="formAjax">ajax.formAjax</li>
+                        <li data-item="staticAjax">ajax.staticAjax</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="level-title" href="">dom</a>
+                    <ul class="item-list">
+                        <li data-item="setStyles">dom.setStyles</li>
+                        <li data-item="hide">dom.hide</li>
+                        <li data-item="attributeName">dom.attributeName</li>
+                        <li data-item="createDom">dom.createDom</li>
+                        <li data-item="hasClass">dom.hasClass</li>
+                        <li data-item="modifyClass">dom.modifyClass</li>
+                        <li data-item="addClass">dom.addClass</li>
+                        <li data-item="removeClass">dom.removeClass</li>
+                        <li data-item="appendHTML">dom.appendHTML</li>
+                        <li data-item="appendNodes">dom.appendNodes</li>
+                        <li data-item="appendDom">dom.appendDom</li>
+                        <li data-item="createIframe">dom.createIframe</li>
+                        <li data-item="deleteIframe">dom.deleteIframe</li>
+                        <li data-item="g">dom.g</li>
+                        <li data-item="contain">dom.contain</li>
+                        <li data-item="scrollToBottom">dom.scrollToBottom</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="level-title" href="">event</a>
+                    <ul class="item-list">
+                        <li data-item="on">event.on</li>
+                        <li data-item="once">event.once</li>
+                        <li data-item="off">event.off</li>
+                        <li data-item="emit">event.emit</li>
+                        <li data-item="listeners">event.listeners</li>
+                        <li data-item="setMaxListeners">event.setMaxListeners</li>
+                        <li data-item="mixin">event.mixin</li>
+                    </ul>
+                </li>
+                <li data-item="jsonp">
+                    <a class="level-title" href="">JSON</a>
+                    <ul class="item-list">
+                        <li data-item="parse">JSON.parse</li>
+                        <li data-item="stringify">JSON.stringify</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="embed-body-content">
+            <div class="item-content" id="item_content">
+                
+            </div>
+        </div>
+        <script type="text/javascript" src="./view.js"></script>
+    </div>
+</body>
+</html>

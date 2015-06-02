@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>访客消息优化</title>
+    <link rel="stylesheet" href="../dep/revealjs/css/reveal.css">
+    <link rel="stylesheet" href="../dep/revealjs/css/theme/black.css">
+</head>
+
+<body>
+    <div class="reveal">
+
+        <div class="slides">
+            <section>
+                <h1>访客消息优化</h1>
+            </section>
+            <section data-markdown data-separator="---" data-separator-vertical="--">
+                <script type="text/template">
+                    ### 优化数据刷新展示
+                    1. 左侧数据列表刷新采用局部刷新方式
+                       更新列表数据时采用esui的table控件的局部数据刷新方式，
+                       不再采用更新左侧数据的anctionpanel的url方式来更新数据
+                    2. 关键代码为：
+                       var sessionListTable = view.get('sessionList');
+                       sessionListTable.setDatasource(data);
+                    *  采用这种方法后可大大改善更新数据的闪动问题，以及数据渲染
+                       时间上也更短。
+                       如原先更新数据总时间为：500ms-580ms
+                       更新后渲染时间总时间为：150ms-160ms
+                    --
+                    ## 右侧tab数据刷新优化
+                    1. 访客消息右侧历史记录、访客信息、轨迹、名片等在数据变更
+                       时采用局部刷新局部刷新方式更新界面展示，而不再用之前的更
+                       改actionpanel的url方式来更新数据展示。
+                    2. 关键代码为：
+                       customerInfo.prototype.changeView = function () {
+                            var view = this;
+                            var container = view.getContainerElement();
+                            var htmlStr = etpl.render(view.getTemplateName(), 
+                                view.getTemplateData());
+                            container.innerHTML = htmlStr;
+                        }
+                    *  此方法同样可以改善数据变更时，解决刷新闪动问题。在更新时间上
+                       耗费时间也更加短。
+                       如之前更新数据平均为：60ms-80ms
+                       现在的方式更新数据平均为：40ms-50ms
+                    --
+                    ## 访客消息参数更新优化
+                    1. 访客消息界面的操作中，如日期范围、自定义列、自定义筛选、
+                       页码、页数等操作均会引起数据列表的刷新。之前各个操作的
+                       参数获取和传递给数据列表数据获取接口时皆各自去取各个空
+                       间的值来拼凑成一个参数对象。现在统一成一个参数对象缓存
+                       在最外的model中，各个操作可以去更新这个model中的参数对
+                       象，然后获取列表数据时只需获取此参数对象即可。
+                    2. 关键代码为：
+                        // 设置参数
+                        var params = this.get('totalParams') || {};
+                        params = $.extend(params, obj);
+                        // 获取参数
+                        return model.get('totalParams');
+                    *  此更改可降低各个操作更新列表数据的时的复杂度和耦合度，维护
+                       更加方便。
+                </script>
+            </section>
+            <section class="stack present" style="top: 0px; display: block;" data-previous-indexv="0">
+                <section id="fragments" style="top: 160px; display: block;" class="present">
+                    <h2>访客消息待优化点</h2>
+                    <p style="text-align: left;">
+                        1. 访客消息的事件处理逻辑，在注册和事件处理函数现都各自实现，并
+                           &nbsp;&nbsp;都在view中，一些应该使用mvc模式的为使用，一些可以抽离的公共的未
+                           &nbsp;&nbsp;抽离出来。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                        2. view中的脚本逻辑过多，可拆分代码。
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section data-markdown style="text-align:left;">
+                    ## 小建议
+                    在需要渲染页面以来让用户快速看到默认页面的呈现，而避免
+                    由于数据后台获取的长时间间隔造成较长时间无法渲染页面导
+                    致页面有一段时间的空白情况，可采用后台获取数据是不在
+                    model的datasource中调用客户端请求数据接口，在view的
+                    enterdocument方法后调用mode来请求数据，并再调用view的
+                    渲染方法，渲染页面。关键代码示例如下：
+                    <!-- 数据获取 -->
+                    var xxxFun = clientInterface.clientData('xxInterface');
+                    xxxFun().then(function (data) {
+                        model.set('xx', data);
+                        model.fire('xxEvent');
+                    }
+                    <!-- 数据渲染 -->
+                    var container = view.getContainerElement();
+                    var htmlStr = etpl.render(view.getTemplateName(),
+                    view.getTemplateData());
+                    container.innerHTML = htmlStr;
+                </section>
+            </section>
+
+            <section>This End!</section>
+        </div>
+    </div>
+    <script src="../dep/revealjs/lib/js/head.min.js"></script>
+    <script src="../dep/revealjs/js/reveal.js"></script>
+    <script src="../dep/revealjs/plugin/markdown/marked.js"></script>
+    <script src="../dep/revealjs/plugin/markdown/markdown.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+
+</html>

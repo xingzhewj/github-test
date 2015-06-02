@@ -1,95 +1,85 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'publish' ]
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'edpx---v' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 verbose node symlink D:\Program Files\nodejs\\node.exe
-5 verbose publish [ '.' ]
-6 verbose cache add [ '.', null ]
-7 verbose cache add name=undefined spec="." args=[".",null]
-8 verbose parsed url { protocol: null,
-8 verbose parsed url   slashes: null,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: null,
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: null,
-8 verbose parsed url   hash: null,
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: '.',
-8 verbose parsed url   path: '.',
-8 verbose parsed url   href: '.' }
-9 silly lockFile 3a52ce78- .
-10 verbose lock . C:\Users\wangjie19\AppData\Roaming\npm-cache\3a52ce78-.lock
-11 verbose tar pack [ 'C:\\Users\\wangjie19\\AppData\\Roaming\\npm-cache\\work-xingzhe\\0.0.1\\package.tgz',
-11 verbose tar pack   '.' ]
-12 verbose tarball C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
-13 verbose folder .
-14 info prepublish work-xingzhe@0.0.1
-15 silly lockFile 1f1177db-tar tar://.
-16 verbose lock tar://. C:\Users\wangjie19\AppData\Roaming\npm-cache\1f1177db-tar.lock
-17 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
-18 verbose lock tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz C:\Users\wangjie19\AppData\Roaming\npm-cache\f9666a84-e-work-xingzhe-0-0-1-package-tgz.lock
-19 silly lockFile 1f1177db-tar tar://.
-20 silly lockFile 1f1177db-tar tar://.
-21 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
-22 silly lockFile f9666a84-e-work-xingzhe-0-0-1-package-tgz tar://C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package.tgz
-23 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
-24 verbose lock C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package C:\Users\wangjie19\AppData\Roaming\npm-cache\20c6cae9-cache-work-xingzhe-0-0-1-package.lock
-25 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
-26 silly lockFile 20c6cae9-cache-work-xingzhe-0-0-1-package C:\Users\wangjie19\AppData\Roaming\npm-cache\work-xingzhe\0.0.1\package
-27 silly lockFile 3a52ce78- .
-28 silly lockFile 3a52ce78- .
-29 silly publish { name: 'work-xingzhe',
-29 silly publish   version: '0.0.1',
-29 silly publish   description: 'myself work description',
-29 silly publish   dependencies: { underscore: '~1.2.1', jquery: '>1.9.1', express: '*' },
-29 silly publish   main: 'app.js',
-29 silly publish   devDependencies: {},
-29 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-29 silly publish   keywords: [ 'fuck' ],
-29 silly publish   author: { name: 'xingzhe' },
-29 silly publish   license: 'ISC',
-29 silly publish   repository: { type: 'git', url: 'git@github.com:xingzhewj/github-test.git' },
-29 silly publish   bugs: { url: 'https://github.com/xingzhewj/github-test/issues' },
-29 silly publish   homepage: 'https://github.com/xingzhewj/github-test',
-29 silly publish   readme: 'ERROR: No README data found!',
-29 silly publish   gitHead: '496d68b22b2571bd623ab0f38c679accd77bcbd3',
-29 silly publish   _id: 'work-xingzhe@0.0.1',
-29 silly publish   _shasum: '1fd75385131cf58482830f284dc02825503d7ad6',
-29 silly publish   _from: '.' }
-30 verbose request where is /work-xingzhe
-31 verbose request registry https://registry.npmjs.org/
-32 verbose request id 03f740b9172dc782
-33 verbose url raw /work-xingzhe
-34 verbose url resolving [ 'https://registry.npmjs.org/', './work-xingzhe' ]
-35 verbose url resolved https://registry.npmjs.org/work-xingzhe
-36 verbose request where is https://registry.npmjs.org/work-xingzhe
-37 info trying registry request attempt 1 at 17:38:37
-38 http PUT https://registry.npmjs.org/work-xingzhe
-39 http 409 https://registry.npmjs.org/work-xingzhe
-40 verbose request where is /work-xingzhe?write=true
-41 verbose request registry https://registry.npmjs.org/
-42 verbose url raw /work-xingzhe?write=true
-43 verbose url resolving [ 'https://registry.npmjs.org/', './work-xingzhe?write=true' ]
-44 verbose url resolved https://registry.npmjs.org/work-xingzhe?write=true
-45 verbose request where is https://registry.npmjs.org/work-xingzhe?write=true
-46 info trying registry request attempt 1 at 17:38:40
-47 http GET https://registry.npmjs.org/work-xingzhe?write=true
-48 http 200 https://registry.npmjs.org/work-xingzhe?write=true
-49 error publish fail Cannot publish over existing version.
-49 error publish fail Update the 'version' field in package.json and try again.
-49 error publish fail
-49 error publish fail If the previous version was published in error, see:
-49 error publish fail     npm help unpublish
-49 error publish fail
-49 error publish fail To automatically increment version numbers, see:
-49 error publish fail     npm help version
-50 error System Windows_NT 6.1.7601
-51 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
-52 error cwd C:\Users\wangjie19\Desktop\work-begin\github-test
-53 error node -v v0.10.32
-54 error npm -v 1.4.28
-55 error code EPUBLISHCONFLICT
-56 verbose exit [ 1, true ]
+5 verbose cache add [ 'edpx---v', null ]
+6 verbose cache add name=undefined spec="edpx---v" args=["edpx---v",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'edpx---v',
+7 verbose parsed url   path: 'edpx---v',
+7 verbose parsed url   href: 'edpx---v' }
+8 silly lockFile e8ad1fe4-edpx-v edpx---v
+9 verbose lock edpx---v C:\Users\wangjie19\AppData\Roaming\npm-cache\e8ad1fe4-edpx-v.lock
+10 silly lockFile e8ad1fe4-edpx-v edpx---v
+11 silly lockFile e8ad1fe4-edpx-v edpx---v
+12 verbose addNamed [ 'edpx---v', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 506e4f4e-edpx-v edpx---v@
+15 verbose lock edpx---v@ C:\Users\wangjie19\AppData\Roaming\npm-cache\506e4f4e-edpx-v.lock
+16 silly addNameRange { name: 'edpx---v', range: '*', hasData: false }
+17 verbose request where is /edpx---v
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id aa3a5b66b0ca6f01
+20 verbose url raw /edpx---v
+21 verbose url resolving [ 'https://registry.npmjs.org/', './edpx---v' ]
+22 verbose url resolved https://registry.npmjs.org/edpx---v
+23 verbose request where is https://registry.npmjs.org/edpx---v
+24 info trying registry request attempt 1 at 12:37:33
+25 http GET https://registry.npmjs.org/edpx---v
+26 http 404 https://registry.npmjs.org/edpx---v
+27 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '51',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   date: 'Tue, 12 May 2015 04:37:34 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   connection: 'keep-alive',
+27 verbose headers   'x-served-by': 'cache-nrt6126-NRT',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1431405454.254949,VS0,VE732' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '51',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Tue, 12 May 2015 04:37:34 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-nrt6126-NRT',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1431405454.254949,VS0,VE732' } ]
+29 silly lockFile 506e4f4e-edpx-v edpx---v@
+30 silly lockFile 506e4f4e-edpx-v edpx---v@
+31 error 404 404 Not Found: edpx---v
+31 error 404
+31 error 404 'edpx---v' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Windows_NT 6.1.7601
+33 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "edpx---v"
+34 error cwd C:\Users\wangjie19\Desktop\work-begin\embed-draft
+35 error node -v v0.10.32
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]

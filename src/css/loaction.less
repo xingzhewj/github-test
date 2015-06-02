@@ -1,0 +1,39 @@
+#embed_contain {
+    // 左上位置
+    .loaction-left-top {
+        .vertical-fix(@wrapHeight, @wrapWidth, 0, 0);
+        margin: 0;
+    }
+    // 左中位置
+    .loaction-left-middle {
+        .vertical-fix(@wrapHeight, @wrapWidth, 50%, 0);
+        margin-left: 0;
+    }
+    // 左右垂直居中
+    .loaction-middle-middle {
+        .vertical-fix(@wrapHeight, @wrapWidth);
+    }
+    // 左下位置
+    .loaction-left-bottom {
+        .vertical-fix(@wrapHeight, @wrapWidth, 100%, 0);
+        margin-left: 0;
+        margin-top: -@wrapHeight;
+    }
+    // 右上位置
+    .loaction-right-top {
+        .vertical-fix(@wrapHeight, @wrapWidth, 0, 100%);
+        margin-top: 0;
+        margin-left: -@wrapWidth;
+    }
+    // 右中位置
+    .loaction-right-middle {
+        .vertical-fix(@wrapHeight, @wrapWidth, 50%, 100%);
+        margin-left: -@wrapWidth;
+    }
+    // 右下位置
+    .loaction-right-bottom {
+        .vertical-fix(@wrapHeight, @wrapWidth, 100%, 100%);
+        margin-left: -@wrapWidth;
+        margin-top: -@wrapHeight;
+    }
+}

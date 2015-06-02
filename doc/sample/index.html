@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>示例页</title>
+        <script src="../../dep/esl/esl.js"></script>
+        <script>
+        require.config({
+            baseUrl: '../../src',
+            paths: {},
+            packages: [
+            {
+                name: 'ajax',
+                location: 'common',
+                main: 'ajax'
+            },
+            {
+                name: 'dom',
+                location: 'common',
+                main: 'dom'
+            },
+            {
+                name: 'event',
+                location: 'common',
+                main: 'event'
+            },
+            {
+                name: 'template',
+                location: 'common',
+                main: 'template'
+            }
+            ]
+        });
+        </script>
+    </head>
+    <body>
+        <script>
+        require([])
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+.float(@type) {
+    float: @type;
+    // 修复ie6双边距
+    _display: inline;
+}
+// 清除浮动
+.clearfix() {
+    *zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        line-height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+// 圆角
+.border-radius (...) {      
+    -moz-border-radius: @arguments;
+    -webkit-border-radius: @arguments;
+    border-radius: @arguments;
+}
+
+.inline-block() {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.vertical-middle(@height, @width) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: @height;
+    width: @width;
+    margin-left: -@width/2;
+    margin-top: -@height/2;
+}
+
+.vertical-fix(@height, @width, @left:50%, @top:50%) {
+    position: fixed;;
+    top: @left;
+    left: @top;
+    height: @height;
+    width: @width;
+    margin-left: -@width/2;
+    margin-top: -@height/2;
+}

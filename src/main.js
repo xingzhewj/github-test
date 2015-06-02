@@ -1,17 +1,15 @@
-var file = require('./common/file');
-var config = require('./data/config');
+define(function (require) {
 
-function cb(msg) {
-    console.log(msg);
-}
+    'use strict';
 
-exports.initProject = function (args) {
+    var view = require('./embed/view');
 
-    var arguments = args.splice(2);
+    function main () {
+        
+        require('cl!./css/main.css');
 
-    if (arguments[0] === 'init') {
-        file.mkdir(config.basePath + config.config.path + config.config.brower, cb);
+        view.init();
     }
 
-    console.log(arguments);
-};
+    main();
+});

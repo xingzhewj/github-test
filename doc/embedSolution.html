@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>嵌入解决方案</title>
+    <link rel="stylesheet" href="../dep/revealjs/css/reveal.css">
+    <link rel="stylesheet" href="../dep/revealjs/css/theme/black.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>第三方嵌入</h1>
+            </section>
+            <section class="stack present" style="top: 0px; display: block;" data-previous-indexv="0">
+                <section>
+                    <h2>我们能干什么？</h2>
+                    <p style="text-align: left;margin-top: 50px;" class="fragment visible" data-fragment-index="0">
+                        我们能更广泛的传播信息和连接你我他！
+                    </p>
+                </section>
+                <section>
+                    <h2>我们能会对宿主产生负担吗？</h2>
+                    <p style="text-align: left;" class="fragment visible" data-fragment-index="0">
+                        我们以占据极小的宽带，高效并且健壮顽强的运行在宿主页面。在宿主页面独立的运行，不对宿主页面产生影响，也不会受宿主页面各种环境的影响。
+                    </p>
+                </section>
+                <section id="fragments" style="top: 160px; display: block;" class="present">
+                    <h2>我们怎么办到的呢？</h2>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                        我们在独立封闭的作用域内运行我们的代码，在js、html、css、ajax通信中兼容各类浏览器以及各个版本浏览器，我们以简洁、实效的代码去做实现。
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h2>嵌入实现具体方面</h2>
+                <section id="fragments" style="top: 160px; display: block; font-size:31px;" class="present">
+                    <h3>引用嵌入脚本</h3>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                        引用嵌入脚本要设置编码属性charset,以防止在宿主页面显示乱码。
+                        &lt;script charset="utf-8" src="http://cps.baidu.com/xx.js"&gt;&lt;/script&gt;
+                    </p>
+                    <p class="fragment visible" data-fragment-index="1" style="text-align:left;">
+                        引用的脚本位置紧贴着&lt;/body&gt;
+                    </p>
+                </section>
+                <section id="fragments" style="top: 160px; display: block; font-size:31px;" class="present">
+                    <h3>代码运行环境的独立性</h3>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                        代码的执行环境
+                        嵌入的代码执行环境应该与第三方网站的环境关联分离开来，
+                        在变量、执行作用域、样式设定中都要注意执行环境的
+                        独立性。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="1" style="text-align:left;">
+                        例如嵌入代码的总入口采用自执行函数进行自触发执行，作用域设置在当前嵌入的dom
+                        元素中等。
+                        js设置变量和方法时不暴漏在嵌入作用域外，非必要不访问和挂载外部的方法和变量。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="2" style="text-align:left;">
+                        变量与class命名采用嵌入模块特有语义化名称。
+                        编写css代码时，可使用嵌入最外层父容器设置的id作为css筛选器，
+                        其里面所有的其他元素的css选择器也加入此父容器id作为筛选条件，
+                        以此来保证设置的样式有较高的优先级，更不易受寄宿网站的影响。
+                    </p>
+                </section>
+                <section id="fragments" style="top: 160px; display: block;" class="present">
+                    <h3>嵌入的跨域通信</h3>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                        在第三方网站的页面中，通常需要我们收集用户或者与后台
+                        进行通信，以便能让用户通过嵌入的信息提供给用户实质的
+                        服务。通信基本包含两类：
+                    </p>
+                    <p class="fragment visible" data-fragment-index="1" style="text-align:left;">
+                        变量与class命名采用特有语义化名称、采用私有变量对
+                        外尽量不暴漏和访问全局变量和函数。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="2" style="text-align:left;">
+                        只关注发送，不关注接收
+                    </p>
+                    <p class="fragment visible" data-fragment-index="3" style="text-align:left;">
+                        不仅关注发送还关注服务器的反馈
+                    </p>
+                </section>
+                <section id="fragments" style="top: 160px; display: block;" class="present">
+                    <h3>通信请求的跨域具体分类</h3>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                    以上的两类请求在于后台通信时都面临是同域还是跨域的问题。
+                    由于嵌入在了第三方网站中，所以所有的请求通信基本都是采用
+                    跨域通信来与后台进行信息传递与接收。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="1" style="text-align:left;">
+                        跨域主要分为跨协议、跨子域、跨域名三种情况。此处主要
+                        介绍跨域名通信方式。嵌入中主要属于跨域名通信情况。
+                    </p>
+                </section>
+                <section id="fragments" style="display: block;font-size: 30px;top: 100px;" class="present">
+                    <h3>跨域通用解决方法</h3>
+                    <p style="text-align:left;">
+                        跨域名通常采用的方式有window.name、jsonp、iframe+form等。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="0" style="text-align:left;">
+                    window.name方式主要用于通过iframe发送跨域请求，服务器返回js
+                    形式内容更新window.name以此来进行通信。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="1" style="text-align:left;">
+                        Jsonp是比较流行的跨域通信方案。原理就是在发起请求时，动态的在页面加载一个script标签，因为src可以接收跨域资源，然后这个script标签的资源是执行一个js方法，并且将服务端返回的数据作为参数传递过来。这种情况唯一的缺点就是只能发送get请求，不适用用post请求。
+                    </p>
+                    <p class="fragment visible" data-fragment-index="2" style="text-align:left;">
+                    Iframe+form可以满足进行跨域发送post请求的场景,并可以设置accept-charset以此来设置编码。在需要保存信息到后台的时候可以使用此种方法实现跨域保存信息。
+                    </p>
+                </section>
+                <section style="text-align: left;">
+                    <h3>嵌入优化、编译</h3>
+                    <p>
+                    代码的体积要尽量小，要对进行合并压缩。使用edp或grunt。
+                    </p>
+                    <p>
+                    在编写脚本可可注意一些多次使用到的字符串，可以提取的
+                    提取成一个变量，这样在压缩代码时会使压缩的体积更小。
+                    总体压缩后的代码基本不能超过100k。
+                    </p>
+                    <p>
+                    代码的执行效率上要保证的高效效率执行。
+                    </p>
+                    <p>
+                    可以合并图片的采用CSS Sprites，以减小请求次数。
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h2>嵌入的脚本的兼容性</h2>
+                <section>
+                    <p style="text-align:left;">
+                        嵌入的第三方网站由于环境的不确定性，需要满足在各类浏览器和各类版本的浏览器中顺利执行。所有需要考虑方法执行的兼容性和样式的兼容性，以此来满足各类浏览器和各类版本浏览器的呈现一致性和正确性。
+                    </p>
+                </section>
+                <section style="text-align:left;">
+                    在脚本兼容性需要注意的例如事件绑定的兼容性、事件对象的兼容性、ajax兼容性、json、dom的设置文本内容等等。
+                </section>
+                <section style="text-align:left;">
+                    嵌入的结构设计时尽量采用非常用的容器元素，如用ins替代使用div进行布局。尽量不采用span、p等元素，以降低被第三方网站样式设置影响的可能性。
+                </section>
+                <section>
+                    css上图片采用绝对路径引用。
+                    采用css hack等
+                </section>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                ### 对嵌入式的模块代码设计实现如下：
+                dep
+                  |__依赖包
+                doc
+                  |__文档
+                entry
+                  |__index.html（测试页）
+                resource
+                  |__img
+                  |    |__图片资源
+                src
+                  |__common(公共脚本)
+                  |__css(样式)
+                  |__embed(嵌入业务脚本)
+                  |     |__view.js
+                  |     |__model.js
+                  |     |__config.js
+                  |     |__handle.js
+                  |     |__tpl.js
+                  |     |__render.js
+                  |__main.js(入口控制脚本)
+                </script>
+            </section>
+            <section>
+                <h2>原型设计图</h2>
+                <img src="./img/prototype.png" alt="原型图">
+            </section>
+            <section style="text-align: left;">
+                <h3>参考资料</h3>
+                <span>兼容性参考链接：</span>
+                <a href="http://w3help.org/zh-cn/causes/index.html" title="">http://w3help.org/zh-cn/causes/index.html</a></br>
+                <span>css hack参考链接：</span>
+                <a href="https://github.com/logeshpaul/CSS-Hacks" title="">https://github.com/logeshpaul/CSS-Hacks</a>
+            </section>
+            <section>
+                <h2>This End!</h2>
+            </section>
+        </div>
+    </div>
+    <script src="../dep/revealjs/js/reveal.js"></script>
+    <script src="../dep/revealjs/plugin/markdown/marked.js"></script>
+    <script src="../dep/revealjs/plugin/markdown/markdown.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+</html>

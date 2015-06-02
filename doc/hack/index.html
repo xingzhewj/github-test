@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>hack关注</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="../../dep/esl/esl.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h2>此处主要用于可查看有关嵌入的各类js兼容和css的hack问题</h2>
+        </div>
+        <div class="wrap">
+            <div class="left-contain">
+                <ul class="item-list">
+                    <li>
+                        <p>js关注点</p>
+                    </li>
+                    <li>
+                        <p>css关注点</p>
+                    </li>
+                    <li>
+                        <p>html关注点</p>
+                    </li>
+                    <li>
+                        <p>js关注点</p>
+                    </li>
+                    <li>
+                        <p>js关注点</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-contain">
+                <div class="content content-js current" id="content_js"></div>
+                <div class="content content-css hide" id="content_js"></div>
+                <div class="content content-html hide" id="content_js"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-contain">
+                <p class="footer-title">资料链接</p>
+                <ul class="footer-links">
+                    <li class="footer-link-item">
+                        <a href="http://w3help.org/zh-cn/causes/index.html">CSS 兼容性</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+        require.config({
+            baseUrl: '../../',
+            paths: {},
+            packages: [
+            {
+                name: 'template',
+                location: 'src/common',
+                main: 'template'
+            },
+            {
+                name: 'tpl',
+                location: 'src/common',
+                main: 'tpl'
+            },
+            {
+                name: 'dom',
+                location: 'src/common',
+                main: 'dom'
+            },
+            {
+                name: 'ftpl',
+                location: 'src/common',
+                main: 'ftpl'
+            }
+            ]
+        });
+        require(['doc/hack/main'], function (main) {
+            main();
+        });
+        </script>
+    </body>
+</html>
